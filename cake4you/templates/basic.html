@@ -6,10 +6,6 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Home</title>
 
     <!-- Standard Favicon -->
@@ -44,6 +40,7 @@
     </div><!-- Loader /- -->
 
 
+    {% block navbar %}
 
     <!-- Header -->
     <header class="header-main container-fluid no-padding">
@@ -61,7 +58,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="/" title="Logo">
-                            <h3>Royal <img src="{% static 'images/logo.png' %}" alt="logo" /> Bakers</h3>
+                            <h3>Cake <img src="{% static 'images/logo.png' %}" alt="logo" /> 4 You</h3>
                         </a>
                     </div>
                     <div class="add-to-cart">
@@ -126,6 +123,10 @@
             </div>
         </div><!-- Container /- -->
     </header><!-- Header /- -->
+
+    {% endblock navbar %}
+
+    {% block main %}
 
     <main class="site-main page-spacing">
         <!-- Photo Slider -->
@@ -674,6 +675,8 @@
         </div><!-- Newsletter Box /- -->
     </main>
 
+    {% endblock main %}
+
     <footer class="footer-main container-fluid no-padding">
         <div class="footer-content container">
             <div class="col-md-4 col-sm-6 col-xs-6">
@@ -742,7 +745,4 @@
     <!-- Library - Theme JS -->
     <script src="{% static 'js/functions.js' %}"></script>
 </body>
-
-<!-- Mirrored from premiumlayers.com/html/royalbakery/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jan 2022 04:15:08 GMT -->
-
 </html>
