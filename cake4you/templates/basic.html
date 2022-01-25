@@ -30,6 +30,9 @@
     <!-- Custom - Theme CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
+    <!-- TailwindCss File -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tailwindstyle.css' %}">
+
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
@@ -150,8 +153,8 @@
                         <div class="carousel-caption">
                             <img data-animation="animated pulse" src="{% static 'images/slider-ic.png' %}"
                                 alt="slider-ic" width="121" height="124">
-                            <p data-animation="animated bounceInLeft">Cake for Later Cake </p>
-                            <p data-animation="animated bounceInRight">as a way of Life</p>
+                            <p data-animation="animated bounceInLeft">A little bliss</p>
+                            <p data-animation="animated bounceInRight">in every bite</p>
                             <a title="Read More" href="#" data-animation="animated bounceInUp">Read More</a>
                         </div>
                     </div>
@@ -161,8 +164,8 @@
                         <div class="carousel-caption">
                             <img data-animation="animated pulse" src="{% static 'images/slider-ic.png' %}"
                                 alt="slider-ic" width="121" height="124">
-                            <p data-animation="animated bounceInLeft">Cake for Later Cake </p>
-                            <p data-animation="animated bounceInRight">as a way of Life</p>
+                            <p data-animation="animated bounceInLeft">Try it once,</p>
+                            <p data-animation="animated bounceInRight"> and forget the rest!</p>
                             <a title="Read More" href="#" data-animation="animated bounceInUp">Read More</a>
                         </div>
                     </div>
@@ -172,8 +175,8 @@
                         <div class="carousel-caption">
                             <img data-animation="animated pulse" src="{% static 'images/slider-ic.png' %}"
                                 alt="slider-ic" width="121" height="124">
-                            <p data-animation="animated bounceInLeft">Cake for Later Cake </p>
-                            <p data-animation="animated bounceInRight">as a way of Life</p>
+                            <p data-animation="animated bounceInLeft">Life is short, </p>
+                            <p data-animation="animated bounceInRight"> so make it sweet</p>
                             <a title="Read More" href="#" data-animation="animated bounceInUp">Read More</a>
                         </div>
                     </div>
@@ -189,6 +192,41 @@
 
         {% endblock photo_slider %}
 
+        {% block welcome %}
+
+        <!-- Welcome Section -->
+        <div class="welcome-section container-fluid no-padding">
+            <div class="section-padding"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <img src="{% static 'images/welcome.png' %}" alt="welcome" width="457" height="700" />
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 wc-content-box">
+                        <div class="welcome-header">
+                            <span>30</span>
+                            <h5>Years</h5>
+                            <h5>Of Excellence</h5>
+                        </div>
+                        <div class="welcome-content">
+                            <div class="section-header left-header">
+                                <h3>About Us</h3>
+                                <h5>Our story</h5>
+                                <img src="{% static 'images/section-seprator-1.png' %}" alt="section-seprator"
+                                    width="70" height="3">
+                                <p>The day for a three hour tour a three hour tour then one day he was shooting at some
+                                    food and up through the ground came a oil that is its a beautiful day Got a dream
+                                    and we just know now we are gonna make our dream come true so get a witch is shawl
+                                    on a broomstick you can crawl on were gonna pay.</p>
+                                <a href="#" title="Read More" class="read-more">Read More</a>
+                            </div><!-- Section Header /-  -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Container /- -->
+        </div><!-- Welcome Section /- -->
+
+        {% endblock welcome %}
 
         {% block menu %}
 
@@ -345,10 +383,384 @@
                 </div>
             </div>
         </div><!-- Menu Section /- -->
-        <div class="section-padding"></div>
+        <!-- <div class="section-padding"></div> -->
 
+        {% endblock menu %}
 
-        <!-- Latest Blog -->
+        {% block team-carousel %}
+
+        <!-- Team Section -->
+        <div class="team-section container-fluid no-padding">
+            <div class="section-padding"></div>
+            <div class="container">
+                <div class="row">
+                    <!-- Main Carousel -->
+                    <div id="main-carousel1" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div role="listbox" class="carousel-inner">
+                            <div class="item active">
+                                <div class="team-content">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <img src="{% static 'images/team.png' %}" alt="team" width="468" height="595" />
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="section-header left-header">
+                                            <h3>Meet Our Team</h3>
+                                            <h5>CHEFS</h5>
+                                            <img src="{% static 'images/section-seprator-1.png' %}"
+                                                alt="section-seprator" width="70" height="3">
+                                            <p>The day for a three hour tour a three hour tour then one day he was
+                                                shooting at some food and up through the ground came a oil that is its a
+                                                beautiful day Got a dream and we just know now we are gonna make our
+                                                dream come true so get a witch is shawl on a broomstick you can crawl on
+                                                were gonna pay.</p>
+                                        </div><!-- Section Header /-  -->
+                                        <div class="team-contact-info">
+                                            <h5>Stefhen Richards</h5>
+                                            <ul>
+                                                <li><a href="#" title="Facebook"><i class="fa fa-facebook"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li><a href="#" title="Twitter"><i class="fa fa-twitter"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li><a href="#" title="Google-plus"><i class="fa fa-google-plus"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li><a href="#" title="linkedin"><i class="fa fa-linkedin"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li><a href="#" title="instagram"><i class="fa fa-instagram"
+                                                            aria-hidden="true"></i></a></li>
+                                            </ul>
+                                            <p><a href="mailto:info@domain.com" title="info@domain.com"><i
+                                                        class="fa fa-envelope"
+                                                        aria-hidden="true"></i>info@domain.com</a></p>
+                                            <p><a href="tel:1-800-23-456-7890" title="1-800-23-456-7890"><i
+                                                        class="fa fa-phone" aria-hidden="true"></i>Phone:
+                                                    1-800-23-456-7890</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="team-content">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <img src="{% static 'images/team.png' %}" alt="team" width="468" height="595" />
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="section-header left-header">
+                                            <h3>Meet Our Team</h3>
+                                            <h5>CHEFS</h5>
+                                            <img src="{% static 'images/section-seprator-1.png' %}"
+                                                alt="section-seprator" width="70" height="3">
+                                            <p>The day for a three hour tour a three hour tour then one day he was
+                                                shooting at some food and up through the ground came a oil that is its a
+                                                beautiful day Got a dream and we just know now we are gonna make our
+                                                dream come true so get a witch is shawl on a broomstick you can crawl on
+                                                were gonna pay.</p>
+                                        </div><!-- Section Header /-  -->
+                                        <div class="team-contact-info">
+                                            <h5>Stefhen Richards</h5>
+                                            <ul>
+                                                <li><a href="#" title="Facebook"><i class="fa fa-facebook"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li><a href="#" title="Twitter"><i class="fa fa-twitter"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li><a href="#" title="Google-plus"><i class="fa fa-google-plus"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li><a href="#" title="linkedin"><i class="fa fa-linkedin"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li><a href="#" title="instagram"><i class="fa fa-instagram"
+                                                            aria-hidden="true"></i></a></li>
+                                            </ul>
+                                            <p><a href="mailto:info@domain.com" title="info@domain.com"><i
+                                                        class="fa fa-envelope"
+                                                        aria-hidden="true"></i>info@domain.com</a></p>
+                                            <p><a href="tel:1-800-23-456-7890" title="1-800-23-456-7890"><i
+                                                        class="fa fa-phone" aria-hidden="true"></i>Phone:
+                                                    1-800-23-456-7890</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#main-carousel1" role="button" data-slide="prev">
+                            <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="right carousel-control" href="#main-carousel1" role="button" data-slide="next">
+                            <i class="fa fa-caret-left" aria-hidden="true"></i>
+                        </a>
+                    </div><!-- Main Carousel /-  -->
+                </div>
+            </div><!-- Container /- -->
+        </div><!-- Team Section /- -->
+
+        {% endblock team-carousel %}
+
+        <!--  Product Menu  -->
+
+        {% block product-menu %}
+
+        <div class="section-header my-16">
+            <h3>Top Selling Products</h3>
+        </div>
+
+        <div class="master-header flex justify-center mt-20 mb-10">
+            <div class="flex justify-between w-5/6">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="master-header flex justify-center my-14">
+            <div class="flex justify-between w-5/6">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="master-header flex justify-center my-14">
+            <div class="flex justify-between w-5/6">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </a>
+                    <div class="p-6 flex justify-center flex-col">
+                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
+                        <p class="text-gray-900 text-3xl font-semibold mb-2">
+                            &#8377;599
+                        </p>
+                        <button type="button"
+                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
+                            To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endblock product-menu %}
+
+        <!-- End Of Product Menu -->
+
+        {% block latest-products %}
+
+        <!-- Latest Products -->
         <div class="latest-blog container-fluid no-padding">
             <div class="section-padding"></div>
             <!-- Container -->
@@ -458,15 +870,15 @@
                 </div>
             </div><!-- Container /- -->
             <div class="section-padding"></div>
-        </div><!-- Latest Blog /- -->
+        </div><!-- Latest Product /- -->
 
-        {% endblock menu %}
+        {% endblock latest-products %}
 
 
         {% block counter %}
 
         <!-- Counter Section -->
-        <div class="counter-section container-fluid no-padding">
+        <div class="counter-section container-fluid no-padding" style="margin-bottom:100px;">
             <div class="container">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="counter-box">
@@ -532,9 +944,8 @@
         <div class="footer-content container">
             <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="about-footer">
-                    <h3>Royal<img src="{% static 'images/logo.png' %}" alt="logo" />Bakers</h3>
-                    <p>The day for a three hour tour a three hour tour then one day he was shooting at some food and up
-                        through the ground oil.</p>
+                    <h3>Cake<img src="{% static 'images/logo.png' %}" alt="logo" />4 You</h3>
+                    <p>Call us on 8866983464 <br> Send an email on <br> cake4you@shop.com</p>
                     <a href="contact-2.html" title="Contact" class="about-links">Contact</a>
                 </div>
             </div>
@@ -542,8 +953,8 @@
             <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="about-footer">
                     <h5>Order online</h5>
-                    <p>The day for a three hour tour a three hour tour then one day he was shooting at some food and up
-                        through the ground oil.</p>
+                    <p>You can buy products online as well as from shop<br> Both options are available <br> You can
+                        choose according to your choice</p>
                     <a href="#" title="Order Now" class="about-links order">Order Now</a>
                 </div>
             </div>
@@ -551,8 +962,9 @@
             <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="about-footer">
                     <h5>Contact Us Today</h5>
-                    <p>Call Us 666 777 888 OR 111 222 333 Send an Email on contact@cakeshop.com Visit Us 123 Fake
-                        Street- London 12358 United Kingdom</p>
+                    <p> G.F.8, Karmam Avenue, Opp. Surya
+                        City, Hirabhai Tower, Maninagar,
+                        Ahmedabad</p>
                     <ul>
                         <li><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
