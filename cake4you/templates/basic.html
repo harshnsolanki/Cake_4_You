@@ -33,6 +33,9 @@
     <!-- TailwindCss File -->
     <link rel="stylesheet" type="text/css" href="{% static 'tailwindstyle.css' %}">
 
+    <!-- SCSS File -->
+    <link rel="stylesheet" type="stylesheet/SCSS" href="{% static 'custome.scss' %}">
+
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
@@ -494,6 +497,39 @@
 
         {% endblock team-carousel %}
 
+        {% block product-carousel %}
+
+        <!-- Product Carousel -->
+        <!-- 
+        <section class="h-96 w-full bg-purple-500">
+            <div class="blog" id="cat">
+                <div class="container">
+                    <h1 class="carousal-categories">Categories</h1>
+                    <div class="owl-carousel owl-theme blog-post">
+
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <div class="img-container">
+                                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Faishwaryatn%2Fcakes%2F&psig=AOvVaw1_qH6EQD_OTz9_jUD08Dcl&ust=1643288223962000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCNjE3Oq7z_UCFQAAAAAdAAAAABAN" alt="Cake-Image">
+                                <div class="img-text">
+                                    <h3>Food</h3>
+                                    <a href="#" class="read">See More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                        <span class="owl-nav-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- End Of Product Carousel -->
+
+        {% endblock product-carousel %}
+
         <!--  Product Menu  -->
 
         {% block product-menu %}
@@ -502,260 +538,425 @@
             <h3>Top Selling Products</h3>
         </div>
 
-        <div class="master-header flex justify-center mt-20 mb-10">
-            <div class="flex justify-between w-5/6">
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
-                    </div>
-                </div>
+        <div class="antialiased bg-gray-200 text-gray-900 font-sans p-6">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                        <a href="#" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                            <div class="i-card relative py-52 overflow-hidden">
+                                <img class="absolute inset-0 h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="mt-2 mb-2 text-gray-600 font-bold">Black-Forest Cake</h4>
+                                <div class="mt-3 flex items-center text-gray-700 font-bold">
+                                    <span class="">&#8377;</span>
+                                    &nbsp;
+                                    <span class="font-bold text-3xl">450</span>
+                                </div>
+                            </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
+                            <div class="p-4 flex items-center text-xl text-gray-600">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-gray-400">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <span class="ml-2">24 Reviews</span>
+                            </div>
+                        </a>
                     </div>
-                </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
-                    </div>
-                </div>
+                    <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                        <a href="#" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                            <div class="i-card relative py-52 overflow-hidden">
+                                <img class="absolute inset-0 h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="mt-2 mb-2 text-gray-600 font-bold">Black-Forest Cake</h4>
+                                <div class="mt-3 flex items-center text-gray-700 font-bold">
+                                    <span class="">&#8377;</span>
+                                    &nbsp;
+                                    <span class="font-bold text-3xl">450</span>
+                                </div>
+                            </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
+                            <div class="p-4 flex items-center text-xl text-gray-600">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-gray-400">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <span class="ml-2">24 Reviews</span>
+                            </div>
+                        </a>
                     </div>
-                </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                        <a href="#" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                            <div class="i-card relative py-52 overflow-hidden">
+                                <img class="absolute inset-0 h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="mt-2 mb-2 text-gray-600 font-bold">Black-Forest Cake</h4>
+                                <div class="mt-3 flex items-center text-gray-700 font-bold">
+                                    <span class="">&#8377;</span>
+                                    &nbsp;
+                                    <span class="font-bold text-3xl">450</span>
+                                </div>
+                            </div>
 
-        <div class="master-header flex justify-center my-14">
-            <div class="flex justify-between w-5/6">
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
+                            <div class="p-4 flex items-center text-xl text-gray-600">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-gray-400">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <span class="ml-2">24 Reviews</span>
+                            </div>
+                        </a>
                     </div>
-                </div>
+                    <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                        <a href="#" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                            <div class="i-card relative py-52 overflow-hidden">
+                                <img class="absolute inset-0 h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="mt-2 mb-2 text-gray-600 font-bold">Black-Forest Cake</h4>
+                                <div class="mt-3 flex items-center text-gray-700 font-bold">
+                                    <span class="">&#8377;</span>
+                                    &nbsp;
+                                    <span class="font-bold text-3xl">450</span>
+                                </div>
+                            </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
+                            <div class="p-4 flex items-center text-xl text-gray-600">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-gray-400">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <span class="ml-2">24 Reviews</span>
+                            </div>
+                        </a>
                     </div>
-                </div>
+                    <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                        <a href="#" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                            <div class="i-card relative py-52 overflow-hidden">
+                                <img class="absolute inset-0 h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="mt-2 mb-2 text-gray-600 font-bold">Black-Forest Cake</h4>
+                                <div class="mt-3 flex items-center text-gray-700 font-bold">
+                                    <span class="">&#8377;</span>
+                                    &nbsp;
+                                    <span class="font-bold text-3xl">450</span>
+                                </div>
+                            </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
+                            <div class="p-4 flex items-center text-xl text-gray-600">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-gray-400">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <span class="ml-2">24 Reviews</span>
+                            </div>
+                        </a>
                     </div>
-                </div>
+                    <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                        <a href="#" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                            <div class="i-card relative py-52 overflow-hidden">
+                                <img class="absolute inset-0 h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="mt-2 mb-2 text-gray-600 font-bold">Black-Forest Cake</h4>
+                                <div class="mt-3 flex items-center text-gray-700 font-bold">
+                                    <span class="">&#8377;</span>
+                                    &nbsp;
+                                    <span class="font-bold text-3xl">450</span>
+                                </div>
+                            </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
+                            <div class="p-4 flex items-center text-xl text-gray-600">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-gray-400">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <span class="ml-2">24 Reviews</span>
+                            </div>
+                        </a>
                     </div>
-                </div>
+                    <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                        <a href="#" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                            <div class="i-card relative py-52 overflow-hidden">
+                                <img class="absolute inset-0 h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="mt-2 mb-2 text-gray-600 font-bold">Black-Forest Cake</h4>
+                                <div class="mt-3 flex items-center text-gray-700 font-bold">
+                                    <span class="">&#8377;</span>
+                                    &nbsp;
+                                    <span class="font-bold text-3xl">450</span>
+                                </div>
+                            </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
+                            <div class="p-4 flex items-center text-xl text-gray-600">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-gray-400">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <span class="ml-2">24 Reviews</span>
+                            </div>
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
+                    <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                        <a href="#" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                            <div class="i-card relative py-52 overflow-hidden">
+                                <img class="absolute inset-0 h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="mt-2 mb-2 text-gray-600 font-bold">Black-Forest Cake</h4>
+                                <div class="mt-3 flex items-center text-gray-700 font-bold">
+                                    <span class="">&#8377;</span>
+                                    &nbsp;
+                                    <span class="font-bold text-3xl">450</span>
+                                </div>
+                            </div>
 
-        <div class="master-header flex justify-center my-14">
-            <div class="flex justify-between w-5/6">
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
+                            <div class="p-4 flex items-center text-xl text-gray-600">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-yellow-500">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 fill-current text-gray-400">
+                                    <path
+                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                    </path>
+                                </svg>
+                                <span class="ml-2">24 Reviews</span>
+                            </div>
+                        </a>
                     </div>
-                </div>
 
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
-                    </div>
-                </div>
-
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
-                    </div>
-                </div>
-
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
-                    </div>
-                </div>
-
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                            alt="" />
-                    </a>
-                    <div class="p-6 flex justify-center flex-col">
-                        <h5 class="text-gray-800 text-2xl font-medium mb-2">Black-Forest Cake</h5>
-                        <p class="text-gray-900 text-3xl font-semibold mb-2">
-                            &#8377;599
-                        </p>
-                        <button type="button"
-                            class="rounded-md inline-block mt-6 px-6 py-2.5 h-12 w-fit bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-3xl focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Add
-                            To Cart</button>
-                    </div>
                 </div>
             </div>
         </div>
 
         {% endblock product-menu %}
-
         <!-- End Of Product Menu -->
 
         {% block latest-products %}
